@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--tenne-tawny: #d65108;
+	--tenne-tawny-dark: #b54507;
+}
+
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.6rem;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.container {
+	min-height: 100vh;
+}
+.wrapper {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	background: #fff;
+	text-align: center;
+}
+
+/*Start Header Section */
+header {
+	/* height: 5rem; */
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 3rem 1rem;
+}
+.logo {
+	margin-right: auto;
+}
+.logo img {
+	width: 30%;
+}
+
+.nav_links {
+	list-style: none;
+}
+.nav_links li {
+	display: inline-block;
+	padding: 0px 20px;
+}
+/*End Header Section */
+.nav_links li a {
+	text-decoration: none;
+	transition: all 0.3s ease 0s;
+	font-weight: 500;
+	font-size: 16px;
+	color: #24252a;
+}
+.nav_links li a:hover {
+	color: #0088a9;
+}
+.btn-common {
+	margin-left: 20px;
+	padding: 9px 25px;
+	background-color: #f0664e;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.btn-common:hover {
+	background-color: rgba(0, 135, 169, 0.8);
+}
+form {
+	display: flex;
+	align-items: center;
+	width: 90%;
+	max-width: 500px;
+	height: 4rem;
+	margin: 20px auto;
+	background-color: rgb(223, 223, 223);
+	border-radius: 6px;
+	position: relative;
+}
+form input {
+	width: 85%;
+	height: 100%;
+	background-color: transparent;
+	padding: 10px;
+	border: none;
+	outline: none;
+	display: inline-block;
+	padding-left: 4rem;
+}
+form .btn-search {
+	width: 15%;
+	border: none;
+	height: 100%;
+	background-color: #f06c4e;
+	cursor: pointer;
+	border-radius: 0px 6px 6px 0px;
+	color: whitesmoke;
+}
+
+form ion-icon {
+	position: absolute;
+	left: 1rem;
+	font-size: 2.2rem;
+	color: rgb(75, 75, 75);
+}
+
+.search-result {
+	margin-top: 50px;
+	width: 100%;
+	display: grid;
+	grid-gap: 20px;
+	grid-template: auto / repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.search-result .item {
+	background-color: rgb(223, 223, 223);
+	padding-bottom: 1.5rem;
+	border-radius: 0.6rem;
+}
+.item img {
+	width: 100%;
+	height: 20rem;
+	border-radius: 6px 6px 0 0;
+}
+
+.item .title {
+}
+.flex-container {
+	margin-top: 1.2rem;
+	cursor: pointer;
+}
+.flex-container h5 {
+	font-size: 1.8rem;
+	color: #252525;
+	font-weight: 500;
+}
+
+/* Modal */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(73, 166, 233, 0.5);
+	display: grid;
+	place-items: center;
+	transition: all 0.3s linear;
+	visibility: hidden;
+	z-index: -10;
+}
+/* OPEN/CLOSE MODAL */
+.open-modal {
+	visibility: visible;
+	z-index: 10;
+}
+.modal-container {
+	background: #fff;
+	border-radius: 0.5rem;
+	width: 90vw;
+	height: 30vh;
+	max-width: 600px;
+	text-align: center;
+	display: grid;
+	place-items: center;
+	position: relative;
+}
+.modal-container.colorRed {
+	color: hsl(360, 67%, 44%);
+}
+.modal-container.colorGreen {
+	color: hsl(125, 71%, 66%);
+}
+.close-btn {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 1.6rem;
+	background: transparent;
+	border-color: transparent;
+	color: hsl(360, 67%, 44%);
+	cursor: pointer;
+	transition: all 0.3s linear;
+}
+.close-btn:hover {
+	color: hsl(360, 71%, 66%);
+	transform: scale(1.3);
+}
